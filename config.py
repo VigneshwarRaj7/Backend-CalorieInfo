@@ -1,12 +1,12 @@
 import os
 
-# Get the base directory of the project
+
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
-# Secret Key for security
+
 SECRET_KEY = 'secret_key'
 
-gemini_api = 'add_your_key'
-#
-# Debug mode
+gemini_api = 'AIzaSyBigK0uLo3k4vnDEuWiN8UISblre4SCSxQ'
+
+
 DEBUG = True

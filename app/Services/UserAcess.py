@@ -1,3 +1,6 @@
+#This service provides response for Login and authenticaion. 
+#It also connect with userManagement service.
+
 from flask import Flask, request, jsonify
 import json
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
@@ -30,7 +33,6 @@ def user_login(email,password):
     else:
         return jsonify({'error': 'User not found.'}), 404
 
-    # Generate an access token with the user's email as the identity
     access_token = create_access_token(identity=email)
     
     return jsonify({'token': access_token}), 200

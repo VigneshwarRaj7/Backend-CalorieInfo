@@ -1,3 +1,7 @@
+#This service receives response from userAcess service.
+#This service receives requests from user_regisration and user_login service.
+#Also responsible for generating hash password and checking hash password.
+
 from app.Models.users import User
 from werkzeug.security import generate_password_hash, check_password_hash
 

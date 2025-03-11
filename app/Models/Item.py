@@ -1,3 +1,4 @@
+#This class defines a food item and its properties.
 class Item:
     def __init__(self, calories, protein, carbs, fat,fiber,vitamins):
         self._calories = calories
@@ -6,7 +7,7 @@ class Item:
         self._fat = fat
         self._fiber = fiber
         self._vitamins = vitamins
-    # Getter methods
+    
     def get_calories(self):
         return self._calories
 
@@ -25,7 +26,7 @@ class Item:
     def get_vitamins(self):
         return self._vitamins
 
-    # Convert to dictionary (for JSON response)
+
     def to_dict(self):
         return {
             "calories": self._calories,

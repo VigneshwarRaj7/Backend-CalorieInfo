@@ -1,3 +1,4 @@
+#This class provides a model to create a user with properties of username and password.
 class User:
     def __init__(self, userName, password):
         self._userName = userName
