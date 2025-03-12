@@ -8,6 +8,7 @@ from  app.Services.UserAcess import user_registration
 from app.Services.UserAcess import user_login
 from app.Services.CustomInformation import get_custom_info
 from app.Services.CalorieGoal import get_calorie_goal
+from flask_jwt_extended import jwt_required
 
 import config as config
 controller_bp = Blueprint('controller', __name__)
@@ -21,6 +22,7 @@ def get_calorie_info():
 
 #This service provides output of the nutrients like protien,carbs,fat,fiber, and vitamins
 @controller_bp.route('/get_nutrition', methods=['GET', 'POST'])
+@jwt_required()
 def get_nutrition():
     
     if request.method == 'GET':
@@ -39,6 +41,7 @@ def get_nutrition():
 
 #This service provides output for the field other questions from frontend.
 @controller_bp.route('/get_custom',methods = ['GET','POST'])
+@jwt_required()
 def get_custom():
     data = request.json
     food_item = data.get("food")
@@ -76,6 +79,7 @@ def login():
 
 #This service provides output about for the calori Guide page, where user can input their weight and age. Responsible for providing calories required per day.
 @controller_bp.route('/get_calorieGoal',methods = ['GET','POST'])
+@jwt_required()
 def get_calorieGoal():
     data = request.json
     weight = data.get("weight")

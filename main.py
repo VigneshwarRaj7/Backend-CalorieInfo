@@ -7,7 +7,7 @@ from flask_jwt_extended import JWTManager
 app = create_app()
 CORS(app)
 
-app.config['JWT_SECRET_KEY'] = 'konvi'  
+app.config['JWT_SECRET_KEY'] = 'your-secret-key'  # Change this to a secure, random key
 jwt = JWTManager(app)
 
 

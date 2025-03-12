@@ -6,6 +6,7 @@ import google.generativeai as genai
 import json
 from app.Models.Item import Item
 
+
 genai.configure(api_key="AIzaSyBigK0uLo3k4vnDEuWiN8UISblre4SCSxQ")  
 def get_nutrition_info(food_item, weight):
        

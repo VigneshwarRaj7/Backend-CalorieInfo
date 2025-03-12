@@ -15,8 +15,18 @@ User **authentication system** (Registration & Login)
 ---
 
 ## ** Setup & Installation**
-### **1️⃣ Clone the Repository**
+
 ```bash
-git clone https://github.com/your-repo/calorie-api.git
-cd calorie-api
-pip install flask
+git clone https://github.com/VigneshwarRaj7/Backend-CalorieInfo.git
+cd Backend-CalorieInfo
+
+TRY:
+    pip install -r requirements.txt
+    python main.py -> to run
+ELSE:
+    pip install flask
+    pip install flask-cors  
+    pip install flask-jwt-extended  
+    pip install requests  
+    pip install google-generativeai
+    python main.py
